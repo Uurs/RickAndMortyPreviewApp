@@ -1,0 +1,134 @@
+final versions = [
+        "androidx_activity_compose"  : "1.6.1",
+        "androidx_appcompat"         : '1.6.0',
+        "androidx_compose_material"  : "1.3.1",
+        "androidx_compose_navigation": "2.5.3",
+        "androidx_compose_rx"        : "1.3.3",
+        "androidx_compose_ui"        : '1.3.3',
+        "androidx_core"              : "1.9.0",
+        "androidx_hilt_compose"      : "1.0.0",
+        "compose_pager"              : "0.29.1-alpha",
+        "hilt"                       : "2.44",
+        "glide"                      : '1.0.0-alpha.1',
+        "jackson"                    : "2.11.1",
+        'okhttp'                     : "3.4.1",
+        "retrofit"                   : '2.9.0',
+        "retrofit_rx"                : '2.9.0',
+        "retrofit_jackson"           : '2.9.0',
+        "room_version"               : '2.5.0',
+        "rxjava"                     : '3.0.2',
+
+        "junit"                      : "4.13.2",
+        "mockk"                      : "1.13.4",
+        "robolectric"                : "4.9",
+        "androidx_test_core"         : "1.5.0",
+        "androidx_test_rule"         : "1.5.0",
+        "androidx_junit_ext"         : "1.1.5",
+        "androidx_test_runner"       : "1.5.2",
+        "androidx_truth_ext"         : "1.5.0",
+        "mock_web_server"            : "5.0.0-alpha.11",
+]
+
+final rxJava = "io.reactivex.rxjava3:rxjava:${versions.rxjava}"
+final rxAndroid = "io.reactivex.rxjava3:rxandroid:${versions.rxjava}"
+
+final retrofit = "com.squareup.retrofit2:retrofit:${versions.retrofit}"
+final rxRetrofit = "com.squareup.retrofit2:adapter-rxjava3:${versions.retrofit_rx}"
+final retrofitJacksonAdapter = "com.squareup.retrofit2:converter-jackson:${versions.retrofit_jackson}"
+final okhttp3_okhttp_urlconnection = "com.squareup.okhttp3:okhttp-urlconnection:+"
+
+final jackson = "com.fasterxml.jackson.core:jackson-databind:${versions.jackson}"
+final jackson_kotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:${versions.jackson}"
+
+final androidx_appcompat = "androidx.appcompat:appcompat:${versions.androidx_appcompat}"
+final androidx_activity_compose = "androidx.activity:activity-compose:${versions.androidx_activity_compose}"
+final androidx_compose_ui = "androidx.compose.ui:ui:${versions.androidx_compose_ui}"
+final androidx_compose_ui_preview = "androidx.compose.ui:ui-tooling-preview:${versions.androidx_compose_ui}"
+final androidx_compose_material = "androidx.compose.material:material:${versions.androidx_compose_material}"
+final androidx_compose_navigation = "androidx.navigation:navigation-compose:${versions.androidx_compose_navigation}"
+final androidx_hilt_compose = "androidx.hilt:hilt-navigation-compose:${versions.androidx_hilt_compose}"
+final androidx_core = "androidx.core:core-ktx:${versions.androidx_core}"
+final androidx_room = "androidx.room:room-runtime:${versions.room_version}"
+final androidx_room_rxjava = "androidx.room:room-rxjava3:${versions.room_version}"
+final androidx_compose_rx = "androidx.compose.runtime:runtime-rxjava3:${versions.androidx_compose_rx}"
+final androidx_compose_ui_tooling = "androidx.compose.ui:ui-tooling:${versions.androidx_compose_ui}"
+final androidx_compose_ui_test_manifest = "androidx.compose.ui:ui-test-manifest:${versions.androidx_compose_ui}"
+final compose_pager = "com.google.accompanist:accompanist-pager:${versions.compose_pager}"
+
+final hilt = "com.google.dagger:hilt-android:${versions.hilt}"
+
+final glide = "com.github.bumptech.glide:compose:${versions.glide}"
+
+final test_junit = "junit:junit:${versions.junit}"
+final test_mockk = "io.mockk:mockk:${versions.mockk}"
+final test_robolectric = "org.robolectric:robolectric:${versions.robolectric}"
+final test_hilt = "com.google.dagger:hilt-android-testing:${versions.hilt}"
+final test_androidx_core = "androidx.test:core:${versions.test_core}"
+final test_androidx_junit_ext = "androidx.test.ext:junit:${versions.androidx_junit_ext}"
+final test_androidx_room = "androidx.room:room-runtime:${versions.room_version}"
+final test_androidx_test_rules = "androidx.test:rules:${versions.androidx_test_rule}"
+final test_androidx_test_runner = "androidx.test:runner:${versions.androidx_test_runner}"
+final test_androidx_truth_ext = "androidx.test.ext:truth:${versions.androidx_truth_ext}"
+final test_mock_web_server = "com.squareup.okhttp3:mockwebserver:${versions.mock_web_server}"
+
+ext {
+    hiltKaptDependency = "com.google.dagger:hilt-compiler:${versions.hilt}"
+    roomKaptDependency = "androidx.room:room-compiler:${versions.room_version}"
+
+    hiltKaptTestDependency = "com.google.dagger:hilt-android-compiler:${versions.hilt}"
+
+    domainDependencies = [
+            hilt,
+            rxJava,
+    ]
+
+    dataDependencies = [
+            hilt,
+            androidx_core,
+            retrofit,
+            rxRetrofit,
+            retrofitJacksonAdapter,
+            jackson,
+            jackson_kotlin,
+            rxJava,
+            androidx_room,
+            androidx_room_rxjava,
+            okhttp3_okhttp_urlconnection,
+    ]
+
+    appDependencies = [
+            androidx_core,
+            androidx_appcompat,
+            androidx_activity_compose,
+            androidx_compose_ui,
+            androidx_compose_ui_preview,
+            androidx_compose_material,
+            androidx_compose_navigation,
+            androidx_compose_rx,
+            androidx_hilt_compose,
+            compose_pager,
+            hilt,
+            glide,
+            rxAndroid,
+            rxJava,
+    ]
+
+    appDebugDependencies = [
+            androidx_compose_ui_tooling,
+            androidx_compose_ui_test_manifest
+    ]
+
+    unitTestDependencies = [
+            test_junit,
+            test_androidx_core,
+            test_mockk,
+            test_robolectric,
+            test_hilt,
+            test_androidx_test_runner,
+            test_androidx_test_rules,
+            test_androidx_junit_ext,
+            test_androidx_truth_ext,
+            test_androidx_room,
+            test_mock_web_server,
+    ]
+}

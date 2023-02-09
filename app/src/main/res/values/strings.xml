@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Rick &amp; Morty App</string>
+    <string name="home_bottom_nav_bar_characters">Characters</string>
+    <string name="home_bottom_nav_bar_favorites">Favorites</string>
+    <string name="common_no_internet_connection">No internet connection</string>
+    <string name="common_failed_to_fetch_data">Failed to load data</string>
+    <string name="common_failed_to_perform_action">Failed to perform action</string>
+    <string name="common_default_unknown">Unknown</string>
+
+<!--    region Search -->
+    <string name="search_list_item_image_content_description">Character Image</string>
+    <string name="search_list_item_species_hint">Species</string>
+    <string name="search_list_item_species_placeholder">Not specified</string>
+    <string name="search_list_item_status_hint">Status</string>
+    <string name="search_list_item_status_placeholder">Not specified</string>
+    <string name="search_input_label">Search a character</string>
+    <string name="search_no_internet_connection">@string/common_no_internet_connection</string>
+    <string name="search_failed_to_load_characters">Failed to load characters</string>
+<!--    endregion-->
+
+<!--    region Favorites -->
+    <string name="favorites_empty_list_message">You don\'t have any favorite character yet</string>
+    <string name="favorites_failed_to_fetch_data">@string/common_failed_to_fetch_data</string>
+    <string name="favorites_failed_to_toggle_favorite">@string/common_failed_to_perform_action</string>
+<!--    endregion -->
+
+<!--    region Character details-->
+    <string name="character_details_image_content_description">Character Image</string>
+    <string name="character_details_subtitle_species">Species</string>
+    <string name="character_details_default_species">@string/common_default_unknown</string>
+    <string name="character_details_subtitle_status">Status</string>
+    <string name="character_details_default_status">@string/common_default_unknown</string>
+    <string name="character_details_subtitle_gender">Gender</string>
+    <string name="character_details_subtitle_origin">Origin</string>
+    <string name="character_details_subtitle_last_known_location">Last known location</string>
+    <string name="character_details_failed_to_load_data">@string/common_failed_to_fetch_data</string>
+<!--    endregion-->
+</resources>
